@@ -1,5 +1,6 @@
 package com.androiddevs.mvvmnewsapp.api
 
+
 import com.androiddevs.mvvmnewsapp.util.Constants.Companion.BASE_URL
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
@@ -15,14 +16,14 @@ class RetrofitInstance {
             val client = OkHttpClient.Builder()
             .addInterceptor(logging)
             .build()
-            val build = Retrofit.Builder().baseUrl(BASE_URL)
+             Retrofit.Builder().baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client).build()
 
         }
-//        val api by lazy {
-//            retrofit.create(NewsAPI::class.java)
-//        }
+        val api by lazy {
+            retrofit.create(NewsAPI::class.java)
+        }
     }
 }
 
