@@ -2,6 +2,8 @@ package com.androiddevs.mvvmnewsapp.db
 
 import android.content.Context
 import androidx.room.*
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.androiddevs.mvvmnewsapp.models.Article
 
 @Database(
